@@ -1,0 +1,150 @@
+body {
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+#weatherCardDisplay {
+    position: relative; left:-100px;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+body {
+    padding:30px;
+}
+
+.container {
+    color: #333333;
+    font-family: arial;
+    padding: 30px;
+    width:400px;
+    box-shadow:0px 1px 10px 0px rgba(207,207,207,1);
+}
+
+.row {
+    padding:3px;
+}
+.col-md-6,.col-md-12 {
+    margin-bottom: 10px;
+}
+.heading {
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+.date {
+    color:grey;
+    text-align: left;
+
+}
+.temperature {
+    font-size:80px;
+}
+.superscript {
+    font-size:50px;
+}
+
+#mainImage{
+    margin-top:5px;
+    height:100px;
+}
+
+.icons div img {
+
+    width:12px;
+    height:15px;
+}
+.line {
+    
+    border-top: 1px solid grey;
+
+}
+
+
+
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.portrait {
+    width: 250px;
+    border-radius:50%;
+}
+/*hover zoom property */
+
+input {
+    border:1px solid #cccccc;
+    padding:8px;
+}
+button {
+    cursor:pointer;
+    border:1px solid #888888;
+    background: #888888;
+    color:white;
+    padding:8px;
+}
+.img-hover-zoom img {
+    transition: transform .5s, filter 1.5s ease-in-out;
+  filter: grayscale(100%);
+  cursor: pointer;
+  }
+
+  /* [3] Finally, transforming the image when container gets hovered */
+  .img-hover-zoom:hover img {
+    filter: grayscale(0);
+  transform: scale(1.1);
+  }
+
+
+  @media (max-width: 800px) {
+    #weatherCardDisplay {
+        left:0;
+    }
+    .heading {
+        text-align: center;
+    }
+    .date {
+        text-align:center;
+    }
+    #mainImage {
+        margin-top:0px;
+    }
+    .temperature{
+        font-size: 60px;
+    }
+    .row {
+        padding:0;
+        text-align:center;
+    }
+    .superscript{
+        font-size:30px;
+    }
+  }

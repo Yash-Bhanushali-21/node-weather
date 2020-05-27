@@ -1,0 +1,73 @@
+body {
+    padding:30px;
+}
+
+.container {
+    color: #333333;
+    font-family: arial;
+    padding: 30px;
+    width:400px;
+    text-align:center;
+    box-shadow:0px 1px 10px 0px rgba(207,207,207,1);
+}
+
+.row {
+    padding:3px;
+}
+.col-md-6,.col-md-12 {
+    margin-bottom: 10px;
+}
+.heading {
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+.date {
+    color:grey;
+    text-align: left;
+
+}
+.temperature {
+    font-size:80px;
+}
+.superscript {
+    font-size:50px;
+}
+
+#mainImage{
+    margin-top:5px;
+    height:100px;
+}
+
+.icons div img {
+
+    width:12px;
+    height:15px;
+}
+.line {
+    
+    border-top: 1px solid grey;
+
+}
+
+@media (max-width: 800px) {
+.heading {
+    text-align: center;
+}
+.date {
+    text-align:center;
+}
+#mainImage {
+    margin-top:0px;
+}
+.temperature{
+    font-size: 60px;
+}
+.row {
+    padding:0;
+}
+.superscript{
+    font-size:30px;
+}
+}

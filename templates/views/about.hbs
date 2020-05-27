@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>About</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <div class="img-hover-zoom">
+            <img class="portrait" onclick="routeLinkedIn();" src="/img/me.jpg">
+        </div>
+    </div>
+    
+    {{>footer}}
+</body>
+
+</html>
+<script type="text/javascript">
+function routeLinkedIn() {
+    window.open('https://www.linkedin.com/in/yash-bhanushali-29476319a', '_blank');
+
+}
+</script>
