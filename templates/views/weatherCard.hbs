@@ -10,52 +10,39 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/cardStyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 heading" >
-                Mumbai,Maharashtra
-            </div>
+            <canvas id="myChart" width="400" height ="400"></canvas>
+            
         </div>
-        <div class="row">
-            <div class="col-md-12 date" >
-                Mon, 12:30 PM 2019
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 temperature" >
-               23<sup class="superscript">°C</sup>
-            </div>
-            <div class="col-md-6" >
-               <img id="mainImage"  src="../img/sun.png">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-               <img src="">Mostly Sunny
-            </div>
-            <div class="col-md-6">
-               <img src="">Weather Pressure
-            </div>
-        </div>
-        <div class="row icons">
-            <div class="col-md-6">
-               <img src="../img/water.svg">3% precipitation
-            </div>
-            <div class="col-md-6">
-               <img src="../img/leaf.svg">125 km/h speed
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 line">
-            </div>
-        </div>
-
-
     </div>
 </body>
-
 </html>
 <script src="/js/app.js"></script>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Temperature Records',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+</script>
