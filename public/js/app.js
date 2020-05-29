@@ -16,6 +16,7 @@ const wind = document.querySelector('.speed')
 const icon = document.querySelector('#mainImage')
 const WeatherCard = document.querySelector('#weatherCardDisplay')
 const footer=document.querySelector('footer')
+const canvas = document.getElementById('myChart')
 
 /* -----------dat section ---- */
 var d = new Date()
@@ -55,7 +56,7 @@ weatherForm.addEventListener('submit', (e) => {
             if (data.error) {
                 WeatherCard.style.display="none"; 
                 messageOne.textContent=data.error
-                messageTwo=''
+                canvas.style.display="none";
             } else {
                 heading.textContent=''+data.location
                 temperature.textContent=""+data.forecast.CurrentTemperature
@@ -63,15 +64,19 @@ weatherForm.addEventListener('submit', (e) => {
                 wind.textContent=""+data.forecast.WindSpeed
                 pressure.textContent="Pressure : "+data.forecast.WeatherPressure
                 precipitation.textContent=""+data.forecast.WindPrecip
+    
                 footer.style.top = "0" //resetting the footer to original place.
                 WeatherCard.style.display="block" //show data card after data rendered.
-                icon.src=''+data.forecast.WeatherIcon              
+                icon.src=''+data.forecast.WeatherIcon  
+
                 
-                var ctx = document.getElementById('myChart').getContext('2d');
+                canvas.setAttribute("height","600");
+                canvas.setAttribute("width","600");
+                var ctx = canvas.getContext('2d');
 
                 var chart = new Chart(ctx, {
                         // The type of chart we want to create
-                   type: 'line',
+                   type: 'bar',
 
                       // The data for our dataset
                    data: {
